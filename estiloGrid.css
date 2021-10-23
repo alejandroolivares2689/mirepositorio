@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: "Rock Salt", cursive;
+  color: red;
+}
+
+#grillaHeader {
+  grid-area: header;
+  font-size: 50px;
+
+  text-align: center;
+}
+.header_index {
+  animation-name: pateticos;
+  animation-duration: 2s;
+  animation-iteration-count: 5;
+}
+
+#grillaBody {
+  grid-area: body;
+}
+.imag {
+  height: 250px;
+  border-radius: 15px;
+}
+
+#grillaFooter {
+  grid-area: footer;
+  height: 100%;
+  align-items: flex-start;
+}
+
+/*estilo PRESENTACION*/
+.grilla_presentacion {
+  display: grid;
+  grid-template-columns: 300px 250px 250px;
+  grid-template-rows: 100px 200px auto auto;
+  grid-template-areas:
+    "logo menu menu"
+    "titulo none none"
+    "texto texto texto"
+    "pie pie pie";
+  row-gap: 10px;
+  column-gap: 10px;
+  justify-content: space-between;
+  margin: 20px 20px 20px 20px;
+}
+
+.logo {
+  grid-area: logo;
+  justify-self: start;
+  align-self: end;
+}
+.logo:hover {
+  transform: rotate(-45deg);
+}
+.input {
+  height: 30px;
+  width: 150px;
+  transition: all 2s;
+}
+.input:focus {
+  width: 250px;
+  font-size: 20px;
+}
+.menu {
+  grid-area: menu;
+  height: 100%;
+  width: 100%;
+  align-self: center;
+  justify-self: end;
+  position: sticky;
+  top: 0;
+}
+.nav {
+  margin-top: 40px;
+  border: solid 1px rgb(32, 30, 30);
+}
+body div nav span {
+  margin-inline-start: 25px;
+}
+.h1 {
+  grid-area: titulo;
+  align-self: center;
+}
+.imagen_texto {
+  grid-area: texto;
+  text-align: center;
+}
+audio {
+  width: 300px;
+  height: 15px;
+  border-radius: 10px;
+}
+
+.footerGral {
+  grid-area: pie;
+  border: solid 2px red;
+  width: 100%;
+  text-align: end;
+}
+footer div {
+  background-image: linear-gradient(45deg, red, transparent);
+}
+
+/*estilo BIOGRAFIA*/
+.grillaBiografia {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 100px 1fr 100px 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "titulo"
+    "texto"
+    "tituloDos"
+    "imagen_texto1"
+    "imagen_texto2"
+    "imagen_texto3"
+    "imagen_texto4";
+  column-gap: 10px;
+  justify-items: center;
+  align-items: center;
+}
+.titulo {
+  grid-area: titulo;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.texto {
+  grid-area: texto;
+}
+.tituloDos {
+  grid-area: tituloDos;
+  font-size: 25px;
+}
+.imagen_texto1 {
+  grid-area: imagen_texto1;
+  justify-self: center;
+}
+.imagen_texto2 {
+  grid-area: imagen_texto2;
+}
+.imagen_texto3 {
+  grid-area: imagen_texto3;
+}
+.imagen_texto4 {
+  grid-area: imagen_texto4;
+}
+.imagen {
+  height: 200px;
+}
+
+/*DISCOGRAFIA*/
+.tabla {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+table tr td {
+  font-family: "Stint Ultra Condensed", cursive;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  text-align: center;
+  border-spacing: 8;
+  border: solid 1px red;
+}
+ul li {
+  font-family: "Stint Ultra Condensed", cursive;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  list-style-type: none;
+}
+.form {
+  grid-area: texto;
+}
+/*GALERIA*/
+.grillaGaleria {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 150px 150px 150px 150px 150px 150px;
+  grid-template-areas:
+    "recital recital"
+    "foto1 foto2"
+    "recital2 recital2"
+    "foto3 foto4"
+    "recital3 recital3"
+    "foto5 foto6";
+  row-gap: 10px;
+  column-gap: 10px;
+  justify-items: center;
+  align-items: center;
+}
+.recital {
+  grid-area: recital;
+  justify-content: center;
+  align-content: center;
+}
+.foto1 {
+  grid-area: foto1;
+  justify-items: right;
+}
+.foto2 {
+  grid-area: foto2;
+}
+.recital2 {
+  grid-area: recital2;
+}
+.foto3 {
+  grid-area: foto3;
+}
+.foto4 {
+  grid-area: foto4;
+}
+.recital3 {
+  grid-area: recital3;
+}
+.foto5 {
+  grid-area: foto5;
+}
+.foto6 {
+  grid-area: foto6;
+}
+.img_galeria {
+  width: 100px;
+  height: 100px;
+}
+.img_galeria:hover {
+  transform: scale(3, 3);
+}
+
+@media only screen and (min-width: 600px) {
+  /*estilo del INDEX*/
+  #grillaIndex {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px 300px 200px;
+    grid-template-areas:
+      "header"
+      "body"
+      "footer";
+
+    row-gap: 20px;
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+/*dispositivos moviles*/
+
+@media only screen and (max-width: 600px) {
+  #grillaIndex {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 60% 20%;
+    grid-template-areas:
+      "header"
+      "body"
+      "footer";
+
+    row-gap: 20px;
+    justify-items: center;
+    align-items: center;
+  }
+  #grillaHeader {
+    grid-area: header;
+    font-size: 20px;
+  }
+  .header_index {
+    text-align: center;
+    width: 90%;
+    height: 100%;
+    animation-name: pateticos;
+    animation-duration: 2s;
+    animation-iteration-count: 3;
+  }
+
+  #grillaBody {
+    grid-area: body;
+  }
+  .imag {
+    height: 100%;
+    border-radius: 15px;
+  }
+
+  #grillaFooter {
+    grid-area: footer;
+    height: 100%;
+    align-items: flex-start;
+  }
+  /*presentacion*/
+  .grilla_presentacion {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 30% 12% 40% 8%;
+    grid-template-areas:
+      "logo"
+      "menu"
+      "titulo"
+      "texto"
+      "pie";
+    row-gap: 5px;
+    column-gap: 5px;
+    justify-content: space-between;
+    margin: 2px 2px 2px 2px;
+  }
+
+  .logo {
+    grid-area: logo;
+    justify-self: center;
+    align-self: center;
+  }
+  .menu {
+    grid-area: menu;
+
+    height: 100%;
+    width: 100%;
+    align-self: center;
+    justify-self: end;
+  }
+  .nav {
+    margin-top: 20px;
+    border: solid 1px rgb(32, 30, 30);
+  }
+  body div nav span {
+    margin-inline-start: 5px;
+    font-size: 10px;
+  }
+  .h1 {
+    grid-area: titulo;
+    align-self: center;
+    font-size: 15px;
+  }
+  .imagen_texto {
+    grid-area: texto;
+    font-size: 10px;
+  }
+  body div section div img {
+    height: 10%;
+  }
+  .footerGral {
+    grid-area: pie;
+    justify-self: end;
+  }
+}
